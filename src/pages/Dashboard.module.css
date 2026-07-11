@@ -1,0 +1,284 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .topRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(225, 6, 0, 0.15);
+  color: var(--f1-red);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: var(--font-f1);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+}
+
+.heroCard {
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(15, 16, 20, 0.9) 0%, rgba(225, 6, 0, 0.1) 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.heroCard h2 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  color: var(--f1-light);
+}
+
+.circuit {
+  font-size: 1.2rem;
+  color: var(--f1-gray-light);
+  margin-bottom: 2rem;
+}
+
+.countdown {
+  font-family: var(--font-f1);
+  font-size: 1.5rem;
+  color: var(--f1-light);
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--f1-red);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.ctaBtn:hover {
+  background: var(--f1-red-hover);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(225, 6, 0, 0.3);
+}
+
+.leaderCard {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leaderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.leaderName {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.firstName {
+  font-size: 1.5rem;
+  color: var(--f1-gray-light);
+}
+
+.lastName {
+  font-size: 3.5rem;
+  font-family: var(--font-f1);
+  color: var(--f1-light);
+}
+
+.leaderTeam {
+  font-size: 1.2rem;
+  color: var(--f1-gray-light);
+  font-weight: 500;
+  border-left: 4px solid var(--f1-red);
+  padding-left: 1rem;
+}
+
+.leaderStats {
+  display: flex;
+  gap: 2rem;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.statLabel {
+  font-size: 0.9rem;
+  color: var(--f1-gray-light);
+  text-transform: uppercase;
+}
+
+.statValue {
+  font-family: var(--font-f1);
+  font-size: 2rem;
+  color: var(--f1-light);
+}
+
+.bottomRow {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .bottomRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chartCard {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.chartCard h3 {
+  font-size: 1.5rem;
+  color: var(--f1-light);
+}
+
+.chartWrapper {
+  height: 300px;
+  width: 100%;
+}
+
+.actionGrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+.actionCard {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  text-decoration: none;
+  transition: var(--transition-normal);
+  cursor: pointer;
+}
+
+.actionCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--f1-red);
+}
+
+.actionIcon {
+  color: var(--f1-red);
+}
+
+.actionCard h3 {
+  font-size: 1.4rem;
+  color: var(--f1-light);
+}
+
+.actionCard p {
+  color: var(--f1-gray-light);
+  line-height: 1.5;
+}
+
+/* News Section */
+.newsSection {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.newsHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  color: var(--f1-light);
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .newsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.newsCard {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  overflow: hidden;
+  transition: var(--transition-normal);
+  padding: 0;
+}
+
+.newsCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--f1-red);
+}
+
+.newsImage {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.newsContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newsCard h4 {
+  font-size: 1.1rem;
+  color: var(--f1-light);
+  line-height: 1.4;
+  font-family: var(--font-body);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.newsDate {
+  color: var(--f1-gray-light);
+  font-size: 0.9rem;
+}

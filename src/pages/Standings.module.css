@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.toggle {
+  display: flex;
+  background: var(--f1-dark);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+}
+
+.toggle button {
+  background: transparent;
+  border: none;
+  color: var(--f1-gray-light);
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.toggle button:hover {
+  color: var(--f1-light);
+}
+
+.toggle button.activeBtn {
+  background: var(--f1-red);
+  color: white;
+}
+
+.tableContainer {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table th {
+  padding: 1rem;
+  font-family: var(--font-f1);
+  color: var(--f1-gray-light);
+  border-bottom: 2px solid var(--f1-dark);
+}
+
+.table td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.highlight {
+  font-weight: 600;
+  color: var(--f1-light);
+}
+
+.points {
+  font-family: var(--font-f1);
+  color: var(--f1-red);
+  font-size: 1.2rem;
+}

@@ -1,0 +1,242 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.titleRow h1 {
+  font-size: 2.5rem;
+  color: var(--f1-light);
+}
+
+.yearSelector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--glass-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--glass-border);
+}
+
+.yearSelector label {
+  color: var(--f1-gray-light);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.yearSelector select {
+  background: transparent;
+  color: var(--f1-light);
+  border: none;
+  font-family: var(--font-f1);
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.yearSelector select option {
+  background: var(--f1-dark);
+  color: var(--f1-light);
+  font-family: var(--font-body);
+}
+
+.header p {
+  color: var(--f1-gray-light);
+  font-size: 1.1rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-normal);
+  animation: slide-up var(--transition-fast) forwards;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.itemMain {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.itemMain:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dateCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1.5rem;
+  border-right: 1px solid var(--glass-border);
+  min-width: 80px;
+}
+
+.month {
+  color: var(--f1-red);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.day {
+  font-family: var(--font-f1);
+  font-size: 2rem;
+  color: var(--f1-light);
+  line-height: 1;
+}
+
+.infoCol {
+  flex: 1;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.roundBadge {
+  color: var(--f1-gray-light);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.infoCol h2 {
+  font-size: 1.4rem;
+  color: var(--f1-light);
+  margin: 0;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--f1-gray-light);
+  font-size: 0.95rem;
+}
+
+.expandIcon {
+  color: var(--f1-gray-light);
+  padding: 0.5rem;
+  transition: var(--transition-fast);
+}
+
+.listItem:hover .expandIcon {
+  color: var(--f1-red);
+}
+
+.past {
+  opacity: 0.6 !important;
+  filter: grayscale(0.5);
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid var(--glass-border);
+  animation: fade-in var(--transition-fast) forwards;
+}
+
+.scheduleItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.05);
+  font-size: 0.95rem;
+  color: var(--f1-gray-light);
+}
+
+.scheduleItem:last-child {
+  border-bottom: none;
+}
+
+.scheduleTime {
+  font-family: var(--font-body);
+  color: var(--f1-light);
+  font-weight: 500;
+}
+
+.qualiHighlight {
+  color: #FF8000;
+  font-weight: 600;
+}
+
+.sprintHighlight {
+  color: #27F4D2;
+  font-weight: 600;
+}
+
+.raceHighlight {
+  color: var(--f1-red);
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .itemMain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .dateCol {
+    border-right: none;
+    border-bottom: 1px solid var(--glass-border);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    width: 100%;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+  
+  .infoCol {
+    padding-left: 0;
+  }
+  
+  .expandIcon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+}
